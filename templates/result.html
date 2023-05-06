@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <title>Flask App using Yolov7 models</title>
+    </head>
+    <body class="text-center">
+        <form class="form-signin card_res mb-6" method=post enctype=multipart/form-data>
+          <img class="mb-10" src="https://www.enroll-u.com/_i/1/7/7/4ecd9be0-eec4-11e9-9992-0231b47980f0.jpeg?w=276&h=276&fit=crop&s=276" width="120" style="border-radius:10%">
+          <h1 class="h3 mb-3 font-weight-normal">Prediction:</h1>
+          <img class="mb-4" src="{{ url_for('static', filename = result_image) }}" alt="User_Image" width="500"
+            height="auto">
+          <button class="btn mb-4"> Test Another Image </button>
+        </form>
+    </body>
+      
+      
+</html>
