@@ -3,10 +3,7 @@ from operator import truediv
 import os
 import json
 from PIL import Image
-import cv2
 import pickle
-
-import torch
 from flask import Flask, jsonify, url_for, render_template, request, redirect, Response
 
 app = Flask(__name__)
@@ -52,10 +49,13 @@ def predict():
 
     return render_template('index.html')
 
-@app.route('/detect', methods=['GET', 'POST'])
-def handle_video():
+if __name__ == "__main__":
+    app.run()
+
+#@app.route('/detect', methods=['GET', 'POST'])
+#def handle_video():
     # some code to be implemented later
-    pass
+#    pass
 
 #def gen_frames():
 #    camera = cv2.VideoCapture(0)
@@ -70,13 +70,13 @@ def handle_video():
 #                  b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
           
-@app.route('/webcam', methods=['GET', 'POST'])
+#@app.route('/webcam', methods=['GET', 'POST'])
 
 #@app.route('/video_feed')
 #def video_feed():
 #    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-def web_cam():
-    # TODO: some code to be implemented later
-    pass
+#def web_cam():
+#    # some code to be implemented later
+#    pass
 
